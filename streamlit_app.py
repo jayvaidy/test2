@@ -18,7 +18,7 @@ if(toggle):
     test_input = st.text_area("Test input here:", max_chars=1000, key="input1", placeholder="Placeholder Text...")
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
-if(test_input != None)
+if(test_input != None):
     st.write(test_input)
 
 indices = np.linspace(0, 1, num_points)
