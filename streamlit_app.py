@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 toggle = st.toggle("Turn on and off the following text box", False)
-first_run = true
+first_run = True
 if(first_run):
     test_input = None
     first_run = false
