@@ -5,12 +5,13 @@ import streamlit as st
 
 toggle = st.toggle("Turn on and off the following text box", False)
 test_input = None
+test_output = ""
 if(toggle):
     test_input = st.text_area("Test input here:", max_chars=1000, key="input1", placeholder="Placeholder Text...")
     test_output = test_input
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
-if(test_output != None):
+if(test_output != ""):
     st.write(test_output)
 
 indices = np.linspace(0, 1, num_points)
