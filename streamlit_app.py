@@ -7,7 +7,7 @@ toggle = st.toggle("Turn on and off the following text box", False)
 first_run = True
 if(first_run):
     test_input = None
-    first_run = false
+    first_run = False
 if(toggle):
     test_input = st.text_area("Test input here:", max_chars=1000, key="input1", placeholder="Placeholder Text...")
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
