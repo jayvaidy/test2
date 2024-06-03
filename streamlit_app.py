@@ -13,7 +13,7 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 toggle = st.toggle("Turn on and off the following text box", False, )
-st.text_area("Test input here:", None, None, 1000, "input1", None, None, None, None, "Placeholder Text...", toggle)
+st.text_area("Test input here:", max_chars=1000, key="input1", placeholder="Placeholder Text...", disabled=toggle)
 
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
