@@ -4,16 +4,15 @@ import pandas as pd
 import streamlit as st
 
 toggle = st.toggle("Turn on and off the following text box", False)
-first_run = True
-if(first_run):
-    test_input = None
-    first_run = False
+test_input = None
+test_output = None
 if(toggle):
     test_input = st.text_area("Test input here:", max_chars=1000, key="input1", placeholder="Placeholder Text...")
+    test_output = test_input
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
-if(test_input != None):
-    st.write(test_input)
+if(test_output != None):
+    st.write(test_output)
 
 indices = np.linspace(0, 1, num_points)
 theta = 2 * np.pi * num_turns * indices
