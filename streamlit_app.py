@@ -5,7 +5,6 @@ import streamlit as st
 
 toggle = st.toggle("Turn on and off the following text box", False)
 test_input = None
-test_output = None
 if(toggle):
     test_input = st.text_area("Test input here:", max_chars=1000, key="input1", placeholder="Placeholder Text...")
     test_output = test_input
